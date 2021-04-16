@@ -1,0 +1,47 @@
+server:
+  port: 80
+
+---
+
+spring:
+  profiles: local
+server:
+  port: 8081
+---
+
+spring:
+  profiles: dev
+server:
+  port: 8082
+
+---
+property:
+    test:
+        name: property depth test
+propertyTest: test
+PropertyTestList: a,b,c
+
+---
+
+fruit:
+  list:
+    - name: banana
+      color: yellow
+    - name: apple
+      color: red
+    - name: water melon
+      color: green
+
+---
+datasource:
+  url: jdbc:h2:mem:testdb
+
+spring:
+  h2:
+    console:
+      enabled: true
+
+---
+spring:
+  thymeleaf:
+    cache: false
