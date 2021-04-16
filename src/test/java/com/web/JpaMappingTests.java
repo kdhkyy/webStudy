@@ -1,5 +1,7 @@
 package com.web;
 
+import com.web.domain.Board;
+import com.web.domain.User;
 import com.web.domain.enums.BoardType;
 
 
@@ -58,7 +60,7 @@ public class JpaMappingTests {
         Board board = boardRepository.findByUser(user);
         assertThat(board.getTitle(), is(boardTestTitle));
         assertThat(board.getSubTitle(), is("서브 타이틀"));
-        assertThat(board.getContnet(), is("콘텐츠"));
+        assertThat(board.getContent(), is("콘텐츠"));
         assertThat(board.getBoardType(), is(BoardType.free));
     }
 }
